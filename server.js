@@ -1,5 +1,6 @@
 const app = require("express")();
 const { v4 } = require("uuid");
+const User = require("./models/userModel");
 
 app.get("/api", (req, res) => {
   const path = `/api/item/${v4()}`;
