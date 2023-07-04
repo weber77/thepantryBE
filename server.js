@@ -13,7 +13,7 @@ app.get("/api/item/:slug", (req, res) => {
   res.end(`Item: ${slug}`);
 });
 
-app.get("/api/register", async (req, res) => {
+app.post("/api/register", async (req, res) => {
   const { email, password, password2 } = req.body;
   if (!email || !password || !password2)
     return res.json({ ok: false, message: "All fields required" });
